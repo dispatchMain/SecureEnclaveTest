@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecureEnclaveTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Plain text to encrypt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bx9-AP-4Qi">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-Zd-Esg">
+                                <rect key="frame" x="20" y="134" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4Q-Fq-iFc">
+                                <rect key="frame" x="20" y="197" width="189" height="30"/>
+                                <state key="normal" title="Encrypt"/>
+                                <connections>
+                                    <action selector="encrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C3P-t7-n20"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5FD-uv-L1G">
+                                <rect key="frame" x="217" y="197" width="177" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VLd-lf-SDb"/>
+                                </constraints>
+                                <state key="normal" title="Decrypt"/>
+                                <connections>
+                                    <action selector="decrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ogL-WU-nih"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5FD-uv-L1G" firstAttribute="leading" secondItem="g4Q-Fq-iFc" secondAttribute="trailing" constant="8" id="1k3-n6-gAk"/>
+                            <constraint firstItem="tp6-Zd-Esg" firstAttribute="top" secondItem="Bx9-AP-4Qi" secondAttribute="bottom" constant="36" id="1sR-bP-lgf"/>
+                            <constraint firstItem="5FD-uv-L1G" firstAttribute="height" secondItem="g4Q-Fq-iFc" secondAttribute="height" id="37Y-Ep-yX0"/>
+                            <constraint firstItem="Bx9-AP-4Qi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="A6K-vf-c6g"/>
+                            <constraint firstItem="tp6-Zd-Esg" firstAttribute="trailing" secondItem="Bx9-AP-4Qi" secondAttribute="trailing" id="NIC-ih-Lyh"/>
+                            <constraint firstItem="Bx9-AP-4Qi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OiQ-RU-DVX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bx9-AP-4Qi" secondAttribute="trailing" constant="20" id="X0J-C6-9NT"/>
+                            <constraint firstItem="5FD-uv-L1G" firstAttribute="trailing" secondItem="Bx9-AP-4Qi" secondAttribute="trailing" id="jg7-mU-Jih"/>
+                            <constraint firstItem="g4Q-Fq-iFc" firstAttribute="top" secondItem="tp6-Zd-Esg" secondAttribute="bottom" constant="63" id="klj-wK-yVr"/>
+                            <constraint firstItem="tp6-Zd-Esg" firstAttribute="leading" secondItem="Bx9-AP-4Qi" secondAttribute="leading" id="qcu-d8-SYa"/>
+                            <constraint firstItem="5FD-uv-L1G" firstAttribute="top" secondItem="tp6-Zd-Esg" secondAttribute="bottom" constant="63" id="uAy-Dt-ScM"/>
+                            <constraint firstItem="g4Q-Fq-iFc" firstAttribute="leading" secondItem="Bx9-AP-4Qi" secondAttribute="leading" id="uxP-3t-ws6"/>
+                            <constraint firstItem="g4Q-Fq-iFc" firstAttribute="width" secondItem="5FD-uv-L1G" secondAttribute="width" multiplier="1.06936" id="xhY-8N-SLK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="Bx9-AP-4Qi" id="NPm-SI-rhV"/>
+                        <outlet property="outputLabel" destination="tp6-Zd-Esg" id="VVr-9R-F9C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="101.08695652173914"/>
+        </scene>
+    </scenes>
+</document>
